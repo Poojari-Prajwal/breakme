@@ -11,6 +11,14 @@
          overflow-x: hidden;
          font-family: 'Open Sans', sans-serif;
      }
+     #main
+     {
+         visibility:hidden;
+         display:flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+     }
         #load
         {
             background-image: url();
@@ -90,6 +98,15 @@
             letter-spacing: 1px;
             }
         }
+       .impetus,.kagada
+       {
+           height:200px;
+           width: 100px;
+       }
+       #imp2
+       {
+           font-size: 30px;
+       }
     </style>
 </head>
 <body onload="setTimeout(firstfun,2500)">
@@ -97,9 +114,11 @@
     <div id="breakp">BREAK ME</div>
     </div>
     <div id="main">
-
+<div class="impetus" id="imp1">f</div>
+<div class="kagada" id="kag1">u</div>
+<div class="codefury" id="cod1">k</div>
     </div>
-    <div id="breakp2">
+    <div id="breakp2" onclick="button()">
         BREAK ME
     </div>
     <script>
@@ -107,6 +126,13 @@ function firstfun()
 {
     document.getElementById("load").style.display="none";
     document.getElementById("breakp2").style.display="block";
+    document.getElementById("main").style.visibility="visible";
+    document.getElementById("cod1").style.display="none";
+}
+
+function button()
+{
+    document.getElementById("imp1").id="imp2";
 }
     </script>
 </body>
