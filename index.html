@@ -5,8 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Break me | IEEE UVCE SD SIG</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+     body{
+         overflow-x: hidden;
+         font-family: 'Open Sans', sans-serif;
+     }
+        #load
+        {
+            background-image: url();
+            width:100vw;
+            background-position: center center;
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            text-align: center;
+            margin-top: 40vh;
+        }
+
+        #breakp
+        {
+            font-size: 3rem;
+            -webkit-animation: apear 5s;
+            -webkit-animation-fill-mode: forwards;
+            animation: appear 5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes appear {
+
+            0% {
+             font-size: 5px;
+            }
+            25% {
+                font-size: 3rem;
+                font-weight: bolder;
+               }
+
+               35% {
+                letter-spacing:2px;
+                }
+               60% {
+               letter-spacing:20px;
+               -webkit-transform: translateY(0%);
+               transform: translateY(0%);
+               }
+
+               85%
+               {
+                -webkit-transform: translateY(0%);
+                transform: translateY(0%);
+                letter-spacing:20px;
+               }
+               100% {
+                -webkit-transform: translateY(800%);
+                transform: translateY(800%);
+                letter-spacing:20px;
+                }
+          }
+    </style>
 </head>
 <body>
-    <div id="load"></div>
+    <div id="load">
+    <div id="breakp">BREAK ME</div>
+    </div>
+    <div id="main">
+
+    </div>
+    <script>
+
+    </script>
 </body>
 </html>
