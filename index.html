@@ -82,6 +82,7 @@
               animation: appear2 1s;
               animation-fill-mode: forwards;
               cursor: pointer;
+              width: 250px;
           }
           @keyframes appear2 {
               0%
@@ -100,40 +101,135 @@
         }
        .impetus,.kagada
        {
-           height:200px;
-           width: 100px;
+           height:70vh;
+           width: 40vw;
+           background-color: black;
+           margin-bottom: 5vh;
+           margin-top:5vh;
+       }
+       .codefury
+       {
+        height:70vh;
+        width: 40vw;
+        background-color:black;
+        border-radius:10px;
+        color:white;
        }
        #imp2
        {
-           font-size: 30px;
+        -webkit-animation: apear3 3s;
+        -webkit-animation-fill-mode: forwards;
+        animation: appear3 3s;
+        animation-fill-mode: forwards;
        }
-    </style>
-</head>
-<body onload="setTimeout(firstfun,2500)">
-    <div id="load">
-    <div id="breakp">BREAK ME</div>
-    </div>
-    <div id="main">
-<div class="impetus" id="imp1">f</div>
-<div class="kagada" id="kag1">u</div>
-<div class="codefury" id="cod1">k</div>
-    </div>
-    <div id="breakp2" onclick="button()">
-        BREAK ME
-    </div>
-    <script>
-function firstfun()
-{
-    document.getElementById("load").style.display="none";
-    document.getElementById("breakp2").style.display="block";
-    document.getElementById("main").style.visibility="visible";
-    document.getElementById("cod1").style.display="none";
-}
+       @keyframes appear3 {
+           50%
+           {
+               background-color: rgb(56, 55, 55,0.7);
+               border:2px solid black;
+               border-radius:10px;
+               -webkit-transform: translateX(20%);
+               transform: translateX(20%);
+                 
+           }
+     100% {
+      -webkit-transform: translateX(-300%);
+      transform: translateX(-300%);
+      display:none;
+      }
+  }
 
-function button()
-{
-    document.getElementById("imp1").id="imp2";
+  #kag2
+  {
+   -webkit-animation: apear4 3s;
+   -webkit-animation-fill-mode: forwards;
+   animation: appear4 3s;
+   animation-fill-mode: forwards;
+  }
+  @keyframes appear4 {
+      50%
+      {
+          background-color: rgb(56, 55, 55,0.7);
+          border:2px solid black;
+          border-radius:10px;
+          -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+            
+      }
+99% {
+ -webkit-transform: translateX(300%);
+ transform: translateX(300%);
+display:none;
+ }
+ 100% {
+    -webkit-transform: translateX(-30000%);
+    transform: translateX(-30000%);
+   display:none;
 }
+  }
+#cod1
+{
+ -webkit-animation: apear5 6s;
+ -webkit-animation-fill-mode: forwards;
+ animation: appear5 6s;
+ animation-fill-mode: forwards;
+}
+@keyframes appear5 {
+    0%
+    {
+       width:0px;
+       opacity:0;
+    }
+    50%
+    {
+       width:0px;
+       opacity:0;
+    }
+100% {
+     width:80vw;
+     opacity:1;
+     margin-left:-80vw;
+ 
+}
+}
+ 
+       #flex
+       {
+        display:flex;
+       align-items: center;
+       justify-content: center;
+       }
+            </style>
+        </head>
+        <body onload="setTimeout(firstfun,2500)">
+            <div id="load">
+            <div id="breakp">BREAK ME</div>
+            </div>
+            <div id="main">
+        <div class="impetus" id="imp1"></div>
+        <div class="kagada" id="kag1"></div>
+        <div class="codefury" id="cod1"></div>
+            </div>
+            <div id="flex">
+            <div id="breakp2" onclick="button()">
+                HINTS
+            </div>
+        </div>
+            <script>
+        function firstfun()
+        {
+            document.getElementById("load").style.display="none";
+            document.getElementById("breakp2").style.display="block";
+            document.getElementById("main").style.visibility="visible";
+            document.getElementById("cod1").style.display="none";
+        }
+
+        function button()
+        {
+            document.getElementById("imp1").id="imp2";
+            document.getElementById("kag1").id="kag2";
+            document.getElementById("cod1").style.display="block";
+        }
     </script>
 </body>
 </html>
