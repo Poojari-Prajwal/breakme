@@ -117,19 +117,18 @@
        }
        #imp2
        {
-        -webkit-animation: apear3 3s;
+        -webkit-animation: apear3 2s;
         -webkit-animation-fill-mode: forwards;
-        animation: appear3 3s;
+        animation: appear3 2s;
         animation-fill-mode: forwards;
        }
        @keyframes appear3 {
            50%
            {
-               background-color: rgb(56, 55, 55,0.7);
+               background-color: rgb(56, 55, 55,0.9);
                border:2px solid black;
                border-radius:10px;
-               -webkit-transform: translateX(10%);
-               transform: translateX(10%);
+            
                  
            }
      100% {
@@ -141,19 +140,18 @@
 
   #kag2
   {
-   -webkit-animation: apear4 3s;
+   -webkit-animation: apear4 2s;
    -webkit-animation-fill-mode: forwards;
-   animation: appear4 3s;
+   animation: appear4 2s;
    animation-fill-mode: forwards;
   }
   @keyframes appear4 {
       50%
       {
-          background-color: rgb(56, 55, 55,0.7);
+          background-color: rgb(56, 55, 55,0.9);
           border:2px solid black;
           border-radius:10px;
-          -webkit-transform: translateX(-40%);
-          transform: translateX(-40%);
+       
             
       }
 99% {
@@ -169,21 +167,24 @@ display:none;
   }
 #cod1
 {
- -webkit-animation: apear5 5s;
+ -webkit-animation: apear5 3s;
  -webkit-animation-fill-mode: forwards;
- animation: appear5 5s;
+ animation: appear5 3s;
  animation-fill-mode: forwards;
+ color:#fff;
 }
 @keyframes appear5 {
     0%
     {
        width:0px;
        opacity:0;
+       display:none;
     }
-    50%
+    40%
     {
        width:0px;
        opacity:0;
+       display:block;
     }
 100% {
      width:80vw;
@@ -199,6 +200,18 @@ display:none;
        align-items: center;
        justify-content: center;
        }
+
+       img{
+           height:150px;
+           width:150px;
+           margin-top:10vh;
+           margin-bottom: 10vh;
+           border-radius: 5px;
+       }
+       #info
+       {
+           font-size:25px;
+       }
             </style>
         </head>
         <body onload="setTimeout(firstfun,2500)">
@@ -208,7 +221,14 @@ display:none;
             <div id="main">
         <div class="impetus" id="imp1"></div>
         <div class="kagada" id="kag1"></div>
-        <div class="codefury" id="cod1"></div>
+        <div class="codefury" id="cod1">
+            <div id="img">
+                <img src="http://images.clipartpanda.com/python-clipart-k11006727.jpg" alt="">
+            </div>
+            <div id="info">
+                I can help you out, if you use me properly!
+            </div>
+        </div>
             </div>
             <div id="flex">
             <div id="breakp2" onclick="button()">
