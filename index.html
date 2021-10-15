@@ -8,7 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
      body{
-         overflow-x: hidden;
+         overflow: hidden;
          font-family: 'Open Sans', sans-serif;
      }
      #main
@@ -18,7 +18,9 @@
          align-items: center;
          justify-content: center;
          text-align: center;
+   
      }
+  
         #load
         {
             background-image: url();
@@ -107,6 +109,7 @@
            margin-bottom: 5vh;
            margin-top:5vh;
        }
+  
        .codefury
        {
         height:70vh;
@@ -167,9 +170,9 @@ display:none;
   }
 #cod1
 {
- -webkit-animation: apear5 3s;
+ -webkit-animation: apear5 2s;
  -webkit-animation-fill-mode: forwards;
- animation: appear5 3s;
+ animation: appear5 2s;
  animation-fill-mode: forwards;
  color:#fff;
 }
@@ -180,7 +183,7 @@ display:none;
        opacity:0;
        display:none;
     }
-    40%
+    50%
     {
        width:0px;
        opacity:0;
@@ -212,6 +215,157 @@ display:none;
        {
            font-size:25px;
        }
+       #imp3
+       {
+        -webkit-animation: apear6 4s;
+        -webkit-animation-fill-mode: forwards;
+        animation: appear6 4s;
+        animation-fill-mode: forwards;
+       }
+       @keyframes appear6 {
+           0%
+           {
+            -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+            background-color: black;
+            border-radius:10px;  
+           }
+          
+           30%
+           {
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+               background-color: black;
+               border-radius:10px;     
+           }
+           65%
+           {
+            -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+               background-color: black;
+               border-radius:10px; 
+           }
+     100% {
+      -webkit-transform: translateX(-500%);
+      transform: translateX(-500%);
+      display:none;
+      }
+  }
+
+  #kag3
+  {
+   -webkit-animation: apear7 4s;
+   -webkit-animation-fill-mode: forwards;
+   animation: appear7 4s;
+   animation-fill-mode: forwards;
+  }
+  @keyframes appear7 {
+      0%
+      {
+       -webkit-transform: translateX(500%);
+       transform: translateX(500%);
+       background-color: black;
+       border-radius:10px;  
+      }
+     
+      30%
+      {
+       -webkit-transform: translateX(0%);
+       transform: translateX(0%);
+          background-color: black;
+          border-radius:10px;     
+      }
+      65%
+      {
+       -webkit-transform: translateX(-10%);
+       transform: translateX(-10%);
+          background-color: black;
+          border-radius:10px; 
+      }
+100% {
+ -webkit-transform: translateX(500%);
+ transform: translateX(500%);
+ display:none;
+ }
+}
+
+#imp4
+{
+    display:block;
+    -webkit-animation: apear8 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation: appear8 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear8 {
+    0%
+    {
+     -webkit-transform: translateX(-500%);
+     transform: translateX(-500%);
+     background-color: black;
+     border-radius:10px;  
+    }
+   
+    30%
+    {
+     -webkit-transform: translateX(0%);
+     transform: translateX(0%);
+        background-color: black;
+        border-radius:10px;     
+    }
+    65%
+    {
+     -webkit-transform: translateX(10%);
+     transform: translateX(10%);
+        background-color: black;
+        border-radius:10px; 
+    }
+100% {
+-webkit-transform: translateX(-500%);
+transform: translateX(-500%);
+display:none;
+}
+}
+
+#kag4
+{
+    display:block;
+    -webkit-animation: apear9 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation: appear9 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes appear9 {
+    0%
+    {
+     -webkit-transform: translateX(500%);
+     transform: translateX(500%);
+     background-color: black;
+     border-radius:10px;  
+    }
+   
+    30%
+    {
+     -webkit-transform: translateX(0%);
+     transform: translateX(0%);
+        background-color: black;
+        border-radius:10px;     
+    }
+    65%
+    {
+     -webkit-transform: translateX(-10%);
+     transform: translateX(-10%);
+        background-color: black;
+        border-radius:10px; 
+    }
+100% {
+-webkit-transform: translateX(500%);
+transform: translateX(500%);
+display:none;
+}
+}
+
             </style>
         </head>
         <body onload="setTimeout(firstfun,2500)">
@@ -223,7 +377,7 @@ display:none;
         <div class="kagada" id="kag1"></div>
         <div class="codefury" id="cod1">
             <div id="img">
-                <img src="pic1.jpg">
+                <img src="pic1.jpg" id="pic">
             </div>
             <div id="info">
                 I can help you out, if you use me properly!
@@ -232,10 +386,18 @@ display:none;
             </div>
             <div id="flex">
             <div id="breakp2" onclick="button()">
-                HINTS
+                HINTS (3)
             </div>
         </div>
+
+        <div id="hidden" style="display: none;">
+            <div class="impetus"></div>
+            <div class="impetus"></div>
+            <div class="kagada"></div>
+        </div>
             <script>
+                var x;
+                x=0;
         function firstfun()
         {
             document.getElementById("load").style.display="none";
@@ -246,8 +408,44 @@ display:none;
 
         function button()
         {
+            if(x==0)
+            {
             document.getElementById("imp1").id="imp2";
             document.getElementById("kag1").id="kag2";
+            document.getElementById("cod1").style.display="block";
+            document.getElementById("breakp2").innerHTML=" HINTS (2)";
+            x=1;
+            }
+            else
+            if(x==1)
+            {
+                document.getElementById("cod1").style.display="none";
+                document.getElementById("imp2").id="imp3";
+                document.getElementById("kag2").id="kag3";
+                setTimeout(display,2500);
+                document.getElementById("pic").src="pic2.png";
+                document.getElementById("info").innerHTML=".i .do .matter { }";
+                document.getElementById("breakp2").innerHTML=" HINT (1)";
+                x=2;
+        
+            }
+            else if(x==2)
+            {
+                document.getElementById("cod1").style.display="none";
+                document.getElementById("imp3").id="imp4";
+                document.getElementById("kag3").id="kag4";
+                setTimeout(display,2500);
+                document.getElementById("pic").src="pic3.png";
+                document.getElementById("info").innerHTML="Dont forget frequency.";
+                document.getElementById("breakp2").innerHTML=" RELOAD";
+                x=3;
+            }
+            else{
+                document.location.reload(true);
+            }
+        }
+        function display()
+        {
             document.getElementById("cod1").style.display="block";
         }
     </script>
